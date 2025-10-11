@@ -1,0 +1,233 @@
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #aaffaa;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+}
+
+header h1 {
+    margin: 0;
+    margin-left: 20px;
+    color: #006600;
+}
+
+header input {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    font-size: 16px;
+    width: 30%;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+input:hover {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+main {
+    width: 700px;
+    max-width: 60%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    padding-bottom: 10px;
+    flex: 1;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+main section h2, main section h3 {
+    margin:0;
+    border-left: #44bb44 5px solid;
+    border-bottom: #44bb44 1px solid;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+main section p {
+    margin:0px;
+    line-height: 1.6;
+}
+
+a.button {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #44bb44;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.button-none {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #cccccc;
+    color: #666666;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+a.button:hover {
+    background-color: #339933;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+footer {
+    background-color: #aaffaa;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+section a {
+    text-decoration: none;
+    color: black;
+    margin: auto 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 2px solid #339933;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding: 5px;
+}
+
+/* ▽ボタン本体 */
+.folder-button {
+    width: 100%;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.folder-button:hover {
+    background-color: #f0f4fa;
+}
+
+/* ▽マーク */
+.folder-button::before {
+    content: "▾";
+    font-size: 24;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.folder-button::after {
+    transform: rotate(-180deg);
+}
+
+.content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    background: #ffffff;
+    border-left: 4px solid #339933;
+    border-radius: 0 0 8px 8px;
+    margin-top: -4px;
+    padding: 0 20px;
+    line-height: 1.7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 
+        padding 0.3s ease;
+
+}
+
+/* 開いたときのスタイル */
+.content.show {
+    opacity: 1;
+    padding: 15px 20px;
+    max-height: 100%; /* 適宜調整 */
+}
+
+button {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #44bb44;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-bottom: #339933 2px solid;
+}
+
+button:hover {
+    background-color: #339933;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+section input {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    font-size: 16px;
+    width: calc(100% - 10px);
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
