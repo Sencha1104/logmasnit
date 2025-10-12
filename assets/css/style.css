@@ -180,24 +180,24 @@ ul li {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    margin-left: 10px;
     background: #ffffff;
     border-left: 4px solid #339933;
     border-radius: 0 0 8px 8px;
-    margin-left:5px;
     margin-top: -4px;
-    padding: 0 20px;
+    padding: 0 10px;
     line-height: 1.7;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: 
-        padding 0.3s ease;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: padding 0.3s ease;
 }
 
 /* 開いたときのスタイル */
 .content.show {
     opacity: 1;
     padding: 15px 20px;
-    max-height: 100%; /* 適宜調整 */
+    max-height: 100%;
+    padding-top: 25px;
+    margin-top: -20px;
 }
 
 button {
@@ -233,6 +233,7 @@ section input {
     transition: box-shadow 0.3s ease;
 
 }
+
 
 
 
