@@ -143,7 +143,7 @@ ul li {
 
 /* ▽ボタン本体 */
 .folder-button {
-    width: 100%;
+    width: Arc(100%-20px);
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc;
@@ -230,4 +230,5 @@ section input {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
+
 }
