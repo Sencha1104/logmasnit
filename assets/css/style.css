@@ -183,6 +183,7 @@ ul li {
     background: #ffffff;
     border-left: 4px solid #339933;
     border-radius: 0 0 8px 8px;
+    margin-left:5px;
     margin-top: -4px;
     padding: 0 20px;
     line-height: 1.7;
@@ -232,5 +233,6 @@ section input {
     transition: box-shadow 0.3s ease;
 
 }
+
 
 
