@@ -84,7 +84,7 @@ main section p {
     line-height: 1.6;
 }
 
-a.button, a.sound-button {
+a.button {
     margin: 10px;
     display: inline-block;
     padding: 10px 20px;
@@ -94,20 +94,6 @@ a.button, a.sound-button {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-a.sound-button::before {
-    content: "🔊";
-    margin-right: 8px;
-}
-
-a.sound-button {
-    background-color: #4444bb;
-}
-
-a.sound-button:hover {
-    background-color: #3333bb;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 a.button-none {
@@ -157,7 +143,7 @@ ul li {
 
 /* ▽ボタン本体 */
 .folder-button {
-    width: 100%;
+    width: calc(100% - 20px);
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc;
@@ -194,23 +180,24 @@ ul li {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    margin-left: 10px;
     background: #ffffff;
     border-left: 4px solid #339933;
     border-radius: 0 0 8px 8px;
     margin-top: -4px;
-    padding: 0 20px;
+    padding: 0 10px;
     line-height: 1.7;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: 
-        padding 0.3s ease;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: padding 0.3s ease;
 }
 
 /* 開いたときのスタイル */
 .content.show {
     opacity: 1;
     padding: 15px 20px;
-    max-height: 100%; /* 適宜調整 */
+    max-height: 100%;
+    padding-top: 25px;
+    margin-top: -20px;
 }
 
 button {
@@ -244,6 +231,7 @@ section input {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
+
 }
 
 table {
