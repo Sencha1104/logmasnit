@@ -52,7 +52,7 @@ input:focus {
 
 main {
     width: 700px;
-    max-width: 60%;
+    max-width: calc(100% - 20px);
     background-color: white;
     margin: 20px auto;
     padding: 20px;
@@ -279,3 +279,4 @@ p span.example-jp {
     flex: 1;
     width: calc(50% - 20px);
 }
+
