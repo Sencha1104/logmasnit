@@ -13,6 +13,229 @@
             <input type="text" id="search" placeholder="単語を検索">
         </header>
         <main>
+            <h2>基本文法</h2>
+            <p>logmasnit語の基本的な文法事項を説明します。語順、句構造、修飾語の位置、疑問文・否定文の形成などを含みます。</p>
+            <section>
+                <h3>語順</h3>
+                <p class="example">
+                    wag mi apo pag.<br><span class="example-jp">私はリンゴを食べている</span><br>
+                    wag mi apo bag.<br><span class="example-jp">あなたはリンゴを食べている</span><br>
+                    log mi apo bag.<br><span class="example-jp">あなたはリンゴを持っている</span></p>
+                <p>logmasnit語の基本的な語順はVSO（動詞-目的語-主語）です。動詞が先に来て、その後に目的語、最後に主語が続きます。<br>上の例だと、wag,logが動詞、apoが目的語、pag,bagが主語となります。<br>miについては後のセクションでお話しします。
+                <br><br>また、この言語には文字がないため、基本的にアルファベットで表されます。また、文末記号も本来はないですが、わかりやすさのために付けています。あってもなくてもどっちでもいいです。</p>
+            </section>
+            <section>
+                <h3>人称代名詞</h3>
+                <p>人称代名詞は、主に4つあります。</p>
+                <table>
+                    <tr>
+                        <th>人称</th>
+                        <th>単数</th>
+                        <th>複数</th>
+                    </tr>
+                    <tr>
+                        <th>1人称</th>
+                        <td>pag (私)</td>
+                        <td>pag li (私たち)</td>
+                    </tr>
+                    <tr>
+                        <th>2人称</th>
+                        <td>bag (あなた)</td>
+                        <td>bag li (あなたたち)</td>
+                    </tr>
+                    <tr>
+                        <th>3人称</th>
+                        <td>deg (彼/彼女/それ)</td>
+                        <td>deg li (彼ら/彼女ら/それら)</td>
+                    </tr>
+                </table>
+                <p>1人称は話し手、2人称は聞き手、3人称は話し手と聞き手以外の人や物を指します。<br>複数形は単数形に「li」を付け加えることで形成されます。<br>
+                <br>また、よく主語などに使われる代名詞として、don - それ/あれ が使われることがあります。</p>
+            </section>
+            <section>
+                <h3>時制・相</h3>
+                <p>時制や相は、動詞の後に置かれる助詞によって表されます。<br>この時制や相を表す助詞のことを時相詞と呼ぶことがあります。<br>
+                <br>時相詞は、時制を表す子音と相を表す母音から成り立ちます。</p>
+                <div class="side-by-side">
+                    <table>
+                        <tr>
+                            <th>時制</th>
+                            <th>子音</th>
+                        </tr>
+                        <tr>
+                            <td>過去</td>
+                            <td>t</td>
+                        </tr>
+                        <tr>
+                            <td>現在</td>
+                            <td>m</td>
+                        </tr>
+                        <tr>
+                            <td>未来</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>不定時</td>
+                            <td>f</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>相</th>
+                            <th>母音</th>
+                        </tr>
+                        <tr>
+                            <td>開始</td>
+                            <td>e</td>
+                        </tr>
+                        <tr>
+                            <td>進行</td>
+                            <td>i</td>
+                        </tr>
+                        <tr>
+                            <td>完了</td>
+                            <td>u</td>
+                        </tr>
+                        <tr>
+                            <td>無相</td>
+                            <td>a</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>logmasnit語の時制は過去・現在・未来・無時となります。無時とは、いつも起こっていることなど、時間によらないことを指します。<br>また、未来を表すときも注意が必要です。未来を表すときはあくまでも「絶対に起きる事柄」にのみ使え、「～するだろう」とする場合は動詞との間にモダリティ助詞「mo」を入れる必要があります。モダリティ助詞については次のセクションで話します。<br>相は開始・進行・完了・無相があります。無相は、開始から完了までをひっくるめたものという意味合いが強いです。<br></p>
+                <p><br>例えば、動詞「wag (食べる)」に現在進行を表す「mi」を付けると、「wag mi (食べている)」となります。<br>同様に、過去完了を表す「tu」を付けると、「wag tu (食べた)」となります。<br>
+                <br>時相詞は動詞句（後で説明します）の最後に置かれ、動詞の意味を補完します。</p>
+            </section>
+            <section>
+                <h3>動詞句</h3>
+                <p>動詞句は、動詞、態、モダリティ、時相詞などを含む構造です。<br>動詞句は文の中心的な要素であり、文の意味を決定します。<br>
+                <br>例えば、「wag mi apo pag. (私はリンゴを食べている)」では、「wag mi」が動詞句となります。<br>ここで、「wag」が動詞、「mi」が時相詞、「apo」が目的語、「pag」が主語、「mi」が時相詞です。</p>
+            </section>
+            <section>
+                <h3>態</h3>
+                <p class="example">
+                    wag pa mi apo pag.<br><span class="example-jp">私はリンゴを食べさせる</span><br>
+                    log bo mi bag.<br><span class="example-jp">あなたは持たれている</span><br>
+                    wag pa bo ti apo deg.<br><span class="example-jp">彼はリンゴを食べさせられていた</span></p>
+                <p>態は、動詞の形態変化を通じて表され、動作の受け手や行為者の関係を示します。<br>logmasnit語には能動態と受動態と使役態と受動使役態があります。<br>受動態と使役態にそれぞれ表す助詞があり、それを組み合わせて受動使役態を作るのです。</p>
+                <table>
+                    <tr>
+                        <th>使役態</th>
+                        <td>pa</td>
+                        <th>受動態</th>
+                        <td>bo</td>
+                    </tr>
+                </table>
+                <p>例えば、動詞「wag (食べる)」に使役態の助詞「pa」を付けると、「wag pa (食べさせる)」となります。<br>同様に、受動態の助詞「bo」を付けると、「wag bo (食べられる)」となります。<br>
+                <br>使役態と受動態の両方を組み合わせると、受動使役態が形成されます。例えば、「wag pa bo (食べさせられる)」となります。</p>
+            </section>
+            <section>
+                <h3>モダリティ</h3>
+                <p class="example">
+                    wag mo mi apo pag.<br><span class="example-jp">私はリンゴを食べるだろう</span><br>
+                    log su mi bag.<br><span class="example-jp">あなたは持たなければならない</span><br>
+                    wag lo mi apo deg.<br><span class="example-jp">彼はリンゴを食べたい</span></p>
+                <p>モダリティは、動詞の意味に対する話者の態度や意図を示すために使用されます。<br>logmasnit語には、推量・可能性、義務・必要、願望・希望、可能のモダリティがあります。<br>モダリティを表す助詞は以下の通りです。</p>
+                <table>
+                    <tr>
+                        <th>モダリティ</th>
+                        <th>助詞</th>
+                    </tr>
+                    <tr>
+                        <td>推量・可能</td>
+                        <td>mo</td>
+                    </tr>
+                    <tr>
+                        <td>義務・必要</td>
+                        <td>su</td>
+                    </tr>
+                    <tr>
+                        <td>願望・希望</td>
+                        <td>lo</td>
+                    </tr>
+                    <tr>
+                        <td>可能</td>
+                        <td>ni</td>
+                    </tr>
+                </table>
+                <p>例えば、動詞「wag (食べる)」に推量・可能の助詞「mo」を付けると、「wag mo (～するだろう)」となります。<br>同様に、義務・必要の助詞「su」を付けると、「wag su (～しなければならない)」となります。<br>
+                <br>モダリティ助詞は動詞（態助詞）と時相詞の間に置かれ、動詞の意味を補完します。</p>
+            </section>
+            <section>
+                <h3>疑問文</h3>
+                <p class="example">
+                    wag mi apo pag ka?<br><span class="example-jp">私はリンゴを食べていますか？</span><br>
+                    wag mi kona pag?<br><span class="example-jp">私は何を食べていますか？</span><br>
+                    kona mi kona pag?<br><span class="example-jp">何を私はどうしていますか？</span></p>
+                <p>疑問文は、文の最後に疑問助詞「ka」を付けることで形成されます。<br>例えば、「wag mi apo pag ka? (私はリンゴを食べていますか？)」となります。<br>
+                <br>疑問助詞「ka」は文の最後に置かれ、文全体を疑問文に変えます。<br><br>
+                また、疑問詞を使った疑問文もあります。疑問詞はすべて統一され「kona」であり、聞きたいものが入る場所に入れます。<br>例えば、「wag mi kona pag? (私は何を食べていますか？)」となります。<br>聞きたいものではないが確定していない後にはkinoを入れてください。<br>このkona,kinoは主語、目的語、時相詞、モダリティ助詞のどこにでも入れられます。ただし、動詞をkonaにした場合、必ず目的語を入れなければならないことに注意してください。<br>目的語を使わない場合は、目的語の位置にkonaを置いて下さい。</p>
+            </section>
+            <section>
+                <h3>否定</h3>
+                <p class="example">
+                    wag na mi apo pag.<br><span class="example-jp">私はリンゴを食べていない</span><br>
+                    log mi bag na.<br><span class="example-jp">あなたでない人は持っている</span><br>
+                    wag pa mi apo na deg.<br><span class="example-jp">彼はリンゴじゃないものを食べさせる</span></p>
+                <p>否定文によらず、ものの「否定」を表す場合は、その語の後ろに「na」を置いてください。</p>
+                <p>例えば、「wag na mi apo pag. (私はリンゴを食べていない)」となります。<br>同様に、「log mi bag na. (あなたでない人は持っていない)」となります。<br>
+                <br>否定詞「na」は否定したい語の直後に置かれ、その語を否定します。</p>
+            </section>
+            <section>
+                <h3>形容詞・副詞・前置</h3>
+                <p>形容詞や副詞は、必ず形容する語の後ろに置きます。
+                    また、前置詞を置くことで、場所や時間、方法などを表すことができます。<br>前置詞は名詞や形容詞の後ろに置かれ、その名詞の意味を補完します。</p>
+                <table>
+                    <tr>
+                        <th>前置詞</th>
+                        <th>意味</th>
+                        <th>前置詞</th>
+                        <th>意味</th>
+                    </tr>
+                    <tr>
+                        <td>ke</td>
+                        <td>～する.../～するもの</td>
+                        <td>no</td>
+                        <td>～の.../～のもの</td>
+                    </tr>
+                    <tr>
+                        <td>to</td>
+                        <td>～に/～へ</td>
+                        <td>se</td>
+                        <td>～よりも...</td>
+                    </tr>
+                    <tr>
+                        <td>za</td>
+                        <td>～と同じくらい</td>
+                        <td>do</td>
+                        <td>～から</td>
+                    </tr>
+                    <tr>
+                        <td>ga</td>
+                        <td>～で（時）</td>
+                        <td>zo</td>
+                        <td>～で（場所）</td>
+                    </tr>
+                    <tr>
+                        <td>ki</td>
+                        <td>～すること</td>
+                        <td>ne</td>
+                        <td>～が使われている/～が中に入っている</td>
+                    </tr>
+                    <tr>
+                        <td>ze</td>
+                        <td>～するための</td>
+                    </tr>
+                </table>
+                <p>例えば、「no pag (私の)」、「to bag (あなたへ)」などがあります。
+                    <br>一部の前置詞には動詞をつけることができます。例えば、「ke wag (食べるもの)」、「ki log (持つこと)」などがあります。この場合、おけるのは動詞だけでなく、動詞句です。
+                    <br>そのため、前置詞の後に動詞を置き、そのあとに時相詞やモダリティ助詞を置くことも可能です。例えば、「ke wag mi (食べているもの)」、「ki log su (持たなければならないこと)」などがあります。
+                </p>
+            </section>
+            <section>
+                <h3>その他</h3>
+                <p>この文法書は随時更新予定です。</p>
+            </section>
             <section>
                 <a href="../index.html" class="button"><p>トップページへ戻る</p></a>
             </section>
