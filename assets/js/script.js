@@ -31,19 +31,18 @@ document.querySelectorAll("main").forEach(box => {
 
 });
 
-const searchBox = document.getElementById("globalSearch");
-
-searchBox.addEventListener("keydown", (event) => {
+searchInputs.addEventListener("keydown", (event) => {
 // 日本語変換中（Composition中）なら無視
 if (event.isComposing) return;
 
 // Enterキー押下を検出
 if (event.key === "Enter") {
-  const query = searchBox.value.trim();
+  const query = searchInputs.value.trim();
   if (query !== "") {
     // search.html にクエリ付きで遷移
     window.location.href = `search.html?query=${encodeURIComponent(query)}`;
   }
 }
 });
+
 
