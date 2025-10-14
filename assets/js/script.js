@@ -37,11 +37,12 @@ searchInputs.forEach((input) => {
     if (event.key === "Enter") {
       const query = input.value.trim();
       if (query !== "") {
-        window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+        window.location.href = `https://sencha1104.github.io/logmasnit/vocabulary/search.html?query=${encodeURIComponent(query)}`;
       }
     }
   });
 });
+
 
 
 
