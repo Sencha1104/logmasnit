@@ -17,7 +17,7 @@ document.querySelectorAll(".folder-button").forEach(button => {
 
 const searchInputs = document.querySelectorAll("input");
 
-searchInputs.forEach(input => {input.placeholder = "おっと、まだ検索できないようだ";});
+searchInputs.forEach(input => {input.placeholder = "検索機能テスト";});
 
 document.querySelectorAll("main").forEach(box => {
     const section = box.querySelectorAll("section");
@@ -46,3 +46,4 @@ if (event.key === "Enter") {
   }
 }
 });
+
