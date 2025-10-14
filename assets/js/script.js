@@ -17,7 +17,7 @@ document.querySelectorAll(".folder-button").forEach(button => {
 
 const searchInputs = document.querySelectorAll("input");
 
-searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン５";});
+searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン６";});
 
 document.querySelectorAll("main").forEach(box => {
     const section = box.querySelectorAll("section");
@@ -31,22 +31,17 @@ document.querySelectorAll("main").forEach(box => {
 
 });
 
-searchInputs.addEventListener("keydown", (event) => {
-    alert("押したね？");
-// 日本語変換中（Composition中）なら無視
-if (event.isComposing) return;
-
-// Enterキー押下を検出
-if (event.key === "Enter") {
-  const query = searchInputs.value.trim();
-  if (query !== "") {
-    // search.html にクエリ付きで遷移
-      alert("ページ遷移します");
-    window.location.href = `https://sencha1104.github.io/logmasnit/vocabulary/search.html?query=${encodeURIComponent(query)}`;
-  }
-}
+searchInputs.forEach((input) => {
+  input.addEventListener("keydown", (event) => {
+    if (event.isComposing) return;
+    if (event.key === "Enter") {
+      const query = input.value.trim();
+      if (query !== "") {
+        window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+      }
+    }
+  });
 });
-
 
 
 
