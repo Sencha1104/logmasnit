@@ -26,6 +26,7 @@ const resultDiv = document.getElementById("results");
 if (!query) {
   resultDiv.textContent = "検索語が指定されていません。";
 } else {
+  alert(query+"を検索します");
   const results = searchWord(query);
   if (results.length === 0) {
     resultDiv.textContent = `「${query}」に一致する単語は見つかりませんでした。`;
@@ -38,3 +39,4 @@ if (!query) {
 </script>
 </body>
 </html>
+
