@@ -23,6 +23,8 @@ function searchWord(q) {
 }
 
 const resultDiv = document.getElementById("results");
+
+alert(query);
 if (!query) {
   resultDiv.textContent = "検索語が指定されていません。";
 } else {
@@ -39,4 +41,5 @@ if (!query) {
 </script>
 </body>
 </html>
+
 
