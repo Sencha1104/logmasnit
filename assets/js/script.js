@@ -17,7 +17,7 @@ document.querySelectorAll(".folder-button").forEach(button => {
 
 const searchInputs = document.querySelectorAll("input");
 
-searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン３";});
+searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン４";});
 
 document.querySelectorAll("main").forEach(box => {
     const section = box.querySelectorAll("section");
@@ -40,10 +40,12 @@ if (event.key === "Enter") {
   const query = searchInputs.value.trim();
   if (query !== "") {
     // search.html にクエリ付きで遷移
+      alart("ページ遷移します");
     window.location.href = `https://sencha1104.github.io/logmasnit/vocabulary/search.html?query=${encodeURIComponent(query)}`;
   }
 }
 });
+
 
 
 
