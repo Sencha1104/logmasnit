@@ -17,7 +17,7 @@ document.querySelectorAll(".folder-button").forEach(button => {
 
 const searchInputs = document.querySelectorAll("input");
 
-searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン６";});
+searchInputs.forEach(input => {input.placeholder = "検索機能テストヴァージョン７";});
 
 document.querySelectorAll("main").forEach(box => {
     const section = box.querySelectorAll("section");
@@ -42,6 +42,7 @@ searchInputs.forEach((input) => {
     }
   });
 });
+
 
 
 
