@@ -32,8 +32,9 @@ if (!query) {
     resultDiv.textContent = `<section><h3>結果：なし</h3><p>「${query}」に一致する単語は見つかりませんでした。</p></section>`;
   } else {
     resultDiv.innerHTML = results
-      .map(r => `<p><span class="type">${r.type}</span><span class="word">${r.word}</span> — ${r.meaning}</p>`)
+      .map(r => `<section class="results"><h3>${r.word}</h3><p>${r.type}─${r.meaning}</p></section>`)
       .join("");
   }
 }
+
 
