@@ -43,12 +43,41 @@ searchInputs.forEach((input) => {
   });
 });
 
+// randomWords.js
 
+fetch("../json/lexicon.json")
+  .then(res => res.json())
+  .then(data => {
+    const allWords = [];
 
+    // 全カテゴリを一つの配列にまとめる
+    for (const [type, words] of Object.entries(data)) {
+      for (const item of words) {
+        allWords.push({ ...item, type });
+      }
+    }
 
+    // ランダムに5語取り出す
+    const randomWords = pickRandom(allWords, 5);
 
+    // 結果をHTMLに表示
+    const container = document.getElementById("randomWords");
+    container.innerHTML = randomWords
+      .map(
+        (r) =>
+          `<p><span class="type">${r.type}</span> <span class="word">${r.word}</span> — ${r.meaning}</p>`
+      )
+      .join("");
+  })
+  .catch(err => console.error("ランダム単語の読み込みに失敗しました:", err));
 
-
-
-
-
+// ランダム選択関数
+function pickRandom(array, n) {
+  const copy = [...array];
+  const result = [];
+  while (result.length < n && copy.length > 0) {
+    const index = Math.floor(Math.random() * copy.length);
+    result.push(copy.splice(index, 1)[0]);
+  }
+  return result;
+}
