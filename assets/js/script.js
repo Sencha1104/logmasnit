@@ -45,7 +45,7 @@ searchInputs.forEach((input) => {
 
 // randomWords.js
 
-fetch("../json/lexicon.json")
+fetch("http://sencha1104.github.io/logmasnit/assets/json/lexicon.json")
   .then(res => res.json())
   .then(data => {
     const allWords = [];
@@ -81,3 +81,4 @@ function pickRandom(array, n) {
   }
   return result;
 }
+
