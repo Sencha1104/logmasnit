@@ -280,4 +280,13 @@ p span.example-jp {
     width: calc(50% - 20px);
 }
 
+section.reults h3 {
+    border: none;
+}
 
+section.results p span.type {
+    background-color: #dddddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
