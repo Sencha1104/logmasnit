@@ -1,3 +1,70 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.querySelectorAll(".folder-button").forEach(button => {
     button.addEventListener("click", () => {
         const content = button.nextElementSibling;
@@ -45,7 +112,7 @@ searchInputs.forEach((input) => {
 
 // randomWords.js
 
-fetch("http://sencha1104.github.io/logmasnit/assets/json/lexicon.json")
+fetch("http://sencha1104.github.io/logmasnit/assets/json/vocabulary.json")
   .then(res => res.json())
   .then(data => {
     const allWords = [];
@@ -81,4 +148,5 @@ function pickRandom(array, n) {
   }
   return result;
 }
+
 
