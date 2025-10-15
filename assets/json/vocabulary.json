@@ -1,0 +1,17 @@
+{
+  "名詞": [
+    {"word": "pag", "meaning": "私"},
+    {"word": "bag", "meaning": "あなた"},
+    {"word": "deg", "meaning": "彼/彼女/それ"}
+  ],
+  "動詞": [
+    {"word": "wag", "meaning": "食べる"},
+    {"word": "log", "meaning": "持つ"},
+    {"word": "deg", "meaning": "見る"}
+  ],
+  "後置詞": [
+    {"word": "no", "meaning": "〜の"},
+    {"word": "to", "meaning": "〜に"},
+    {"word": "do", "meaning": "〜から"}
+  ]
+}
