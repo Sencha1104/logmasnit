@@ -15,19 +15,39 @@ fetch("../json/lexicon.json")
     console.error("辞書データの読み込みに失敗しました:", err);
   });
 
-// 検索関数
-function searchWord(q) {
-  q = q.trim().toLowerCase();
+// ▼ ひらがな変換用の関数（基本的なもの）
+function toHiragana(text) {
+  // 全角カタカナをひらがなに
+  return text.replace(/[\u30a1-\u30f6]/g, (ch) =>
+    String.fromCharCode(ch.charCodeAt(0) - 0x60)
+  );
+}
+
+function normalize(text) {
+  return toHiragana(text).toLowerCase().trim();
+}
+
+// ▼ 検索関数
+function searchWord(query) {
+  const normQuery = normalize(query);
   const results = [];
-  for (const [type, items] of Object.entries(lexicon)) {
-    for (const item of items) {
-      if (item.word.toLowerCase().includes(q) || item.meaning.includes(q)) {
+
+  for (const [type, words] of Object.entries(lexicon)) {
+    for (const item of words) {
+      const meaningNorm = normalize(item.meaning);
+
+      // 通常一致 OR ひらがな一致
+      if (
+        item.word.toLowerCase().includes(normQuery) ||
+        meaningNorm.includes(normQuery)
+      ) {
         results.push({ ...item, type });
       }
     }
   }
   return results;
 }
+
 
 const resultDiv = document.getElementById("results");
 
@@ -43,7 +63,3 @@ if (!query) {
       .join("");
   }
 }
-
-
-
-
