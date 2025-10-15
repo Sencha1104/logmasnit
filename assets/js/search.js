@@ -38,8 +38,3 @@ if (!query) {
       .join("");
   }
 }
-</script>
-</body>
-</html>
-
-
