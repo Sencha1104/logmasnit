@@ -2,11 +2,18 @@
 const params = new URLSearchParams(window.location.search);
 const query = params.get("query");
 
+let lexicon = {};
+
 // デモ用辞書（本番では外部JSONをfetchで読み込む）
-const lexicon = {
-  "名詞": [{"word":"pag","meaning":"私"},{"word":"bag","meaning":"あなた"}],
-  "動詞": [{"word":"wag","meaning":"食べる"},{"word":"log","meaning":"持つ"}]
-};
+fetch("lexicon.json")
+  .then(res => res.json())
+  .then(data => {
+    lexicon = data;
+    runSearch(); // データ読み込み完了後に検索処理を実行
+  })
+  .catch(err => {
+    console.error("辞書データの読み込みに失敗しました:", err);
+  });
 
 // 検索関数
 function searchWord(q) {
@@ -29,12 +36,13 @@ if (!query) {
 } else {
   const results = searchWord(query);
   if (results.length === 0) {
-    resultDiv.textContent = `<section><h3>結果：なし</h3><p>「${query}」に一致する単語は見つかりませんでした。</p></section>`;
+    resultDiv.innerHTML = `<section><h3>結果：なし</h3><p>「${query}」に一致する単語は見つかりませんでした。</p></section>`;
   } else {
     resultDiv.innerHTML = results
       .map(r => `<section class="results"><h3>${r.word}</h3><p>${r.type}─${r.meaning}</p></section>`)
       .join("");
   }
 }
+
 
 
