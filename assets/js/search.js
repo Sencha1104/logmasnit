@@ -24,17 +24,16 @@ function searchWord(q) {
 
 const resultDiv = document.getElementById("results");
 
-alert(query);
 if (!query) {
   resultDiv.textContent = "検索語が指定されていません。";
 } else {
-  alert(query+"を検索します");
   const results = searchWord(query);
   if (results.length === 0) {
-    resultDiv.textContent = `「${query}」に一致する単語は見つかりませんでした。`;
+    resultDiv.textContent = `<section><h3>結果：なし</h3><p>「${query}」に一致する単語は見つかりませんでした。</p></section>`;
   } else {
     resultDiv.innerHTML = results
       .map(r => `<p><span class="type">${r.type}</span><span class="word">${r.word}</span> — ${r.meaning}</p>`)
       .join("");
   }
 }
+
