@@ -5,7 +5,7 @@ const query = params.get("query");
 let lexicon = {};
 
 // デモ用辞書（本番では外部JSONをfetchで読み込む）
-fetch("../assets/json/vocabulary.json")
+fetch("https://sencha1104.github.io/logmasnit/assets/json/vocabulary.json")
   .then(res => res.json())
   .then(data => {
     lexicon = data;
@@ -43,5 +43,6 @@ if (!query) {
       .join("");
   }
 }
+
 
 
