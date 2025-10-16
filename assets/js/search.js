@@ -32,7 +32,7 @@ function searchWord(q) {
 const resultDiv = document.getElementById("results");
 
 if (!query) {
-  resultDiv.textContent = "検索語が指定されていません。";
+  resultDiv.innerHTML = "<section><h3>おっと！</h3><h3>検索する単語がないよ！</h3></section>";
 } else {
   const results = searchWord(query);
   if (results.length === 0) {
@@ -43,6 +43,7 @@ if (!query) {
       .join("");
   }
 }
+
 
 
 
