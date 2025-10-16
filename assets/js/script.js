@@ -1,70 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.querySelectorAll(".folder-button").forEach(button => {
     button.addEventListener("click", () => {
         const content = button.nextElementSibling;
@@ -148,5 +81,6 @@ function pickRandom(array, n) {
   }
   return result;
 }
+
 
 
